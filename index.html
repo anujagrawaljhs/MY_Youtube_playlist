@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Playlist Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <div class="overlay" id="overlay"></div>
-    
+
     <aside class="sidebar" id="sidebar">
         <div class="brand">
             <span><i class="fa-brands fa-youtube"></i> PlaylistLib</span>
             <button id="closeSidebar" class="mobile-only"><i class="fa-solid fa-times"></i></button>
         </div>
         <div class="playlist-container">
-            <ul id="playlistList"></ul>
+            <ul id="playlistList">
+                <li style="text-align:center; color:#888;">Loading...</li>
+            </ul>
         </div>
     </aside>
 
@@ -35,10 +38,14 @@
 
         <div class="video-wrapper">
             <div class="video-display" id="videoDisplay">
-                <div class="placeholder"><p>Select a video</p></div>
+                <div class="placeholder">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>Select a playlist from the sidebar</p>
+                </div>
             </div>
         </div>
     </main>
+
     <script type="module" src="app.js"></script>
 </body>
 </html>
